@@ -12,11 +12,3 @@ services:
         value: 10000
       - key: CSV_FILE
         value: domains_export.csv
-
-  - type: static
-    name: storeleads-frontend
-    buildCommand: "cd frontend && npm install && npm run build"
-    staticPublishPath: "frontend/build"
-    envVars:
-      - key: REACT_APP_API_URL
-        value: "https://storeleads-backend.onrender.com"
